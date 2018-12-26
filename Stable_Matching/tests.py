@@ -24,6 +24,8 @@ class TestMatchClass(unittest.TestCase):
         with self.assertRaises(TypeError):
             adamSmith.preferences = ["John Doe", "Jane Doe"]
 
+class TestStableMatching(unittest.TestCase):
+
     def testEmployersPreference(self):
         # Initialise employers
         veolia = Match("Veolia")
@@ -101,9 +103,6 @@ class TestMatchClass(unittest.TestCase):
         acceptorsTestAgainst = [p[0], p[3], p[2], p[1]]
 
         self.assertEqual(acceptorsResult, acceptorsTestAgainst)
-
-
-
 
 if __name__ == "__main__":
     unittest.main()
